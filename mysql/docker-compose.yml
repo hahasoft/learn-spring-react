@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      TZ: "Asia/Bangkok"
+      MYSQL_ROOT_PASSWORD: "password"
+      #MYSQL_ROOT_HOST: "%"
+      #MARIADB_DATABASE: testdb
+      #MARIADB_USER: test
+      #MARIADB_PASSWORD: test132
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+  
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin:latest
+#    hostname: phpmyadmin
+#    ports:
+#      - 9999:80
+#    environment:
+#      - PMA_HOST=db
