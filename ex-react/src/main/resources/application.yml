@@ -1,0 +1,16 @@
+#configuration
+server:
+  port: 9090
+  
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fullstack
+    username: root
+    password: password
+    
+    
