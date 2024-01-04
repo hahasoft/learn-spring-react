@@ -11,11 +11,8 @@ services:
     environment:
       TZ: "Asia/Bangkok"
       MYSQL_ROOT_PASSWORD: "password"
-      #MYSQL_ROOT_HOST: "%"
-      #MARIADB_DATABASE: testdb
-      #MARIADB_USER: test
-      #MARIADB_PASSWORD: test132
-
+      MYSQL_DATABASE: "fullstack"
+    
   adminer:
     image: adminer
     ports:
